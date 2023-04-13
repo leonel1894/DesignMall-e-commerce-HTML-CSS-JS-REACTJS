@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
-        <nav className="d-flex justify-content-between align-items-center p-2 px-5 bg-light">
-            <h1 className="fs-2">MundoMuebles <i class="bi bi-house"></i></h1>
-            <div className="d-flex gap-2">
-                <Link to='/category/comedor' className="btn btn-outline-secondary">Comedor</Link>
-                <Link to='/category/living' className="btn btn-outline-secondary">Living</Link>
-                <Link to='/category/cocina' className="btn btn-outline-secondary">Cocina</Link>
+        <nav className="navbar navbar-light bg-light px-4">
+            <Link to='' className="navbar-brand mb-0 h1">DesignMall <i className="bi bi-house"></i></Link>
+            <div className="d-flex justify-content-center align-items-center gap-2">
+                <Link to='/category/comedor' className="nav-item nav-link">Comedor</Link>
+                <Link to='/category/living' className="nav-item nav-link">Living</Link>
+                <Link to='/category/dormitorio' className="nav-item nav-link">Dormitorio</Link>
                 <CartWidget/>
             </div>
             
