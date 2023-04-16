@@ -118,7 +118,7 @@ export const Checkout = () => {
 
             </form>
 
-            { orderId ? <h2 className="text-muted p-4">El id de su orden es: {orderId}</h2> : <button onClick={handleSubmit}>Generar orden</button> }
+            { orderId ? <h2 className="text-muted p-4">El id de su orden es: {orderId}</h2> : <button className="btn btn-primary" onClick={handleSubmit}>Generar orden</button> }
         </div>
     )
 
