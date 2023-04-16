@@ -9,7 +9,7 @@ const ItemDetail = ({ id, name, img, price, stock, description }) => {
     const [quantity, setQantity] = useState(0)
     const { addItem } = useContext(CartContex)
     const { setNotification } = useNotification()
-    
+
     const handleOnAdd = (quantity) => {
         const objProducto = {
             id, name, price, quantity
@@ -33,13 +33,13 @@ const ItemDetail = ({ id, name, img, price, stock, description }) => {
                     <p>Precio: {price}</p>
                     <p>Stock: {stock}</p>
                     <p>Descripcion: {description}</p>
-                    {
+                    {/* {
                         quantity > 0 ? (
                             <Link to='/cart'>Finalizar compra</Link>
-                        ) : (
-                            <ItemCount stock={stock} onAdd={handleOnAdd} />
-                        )
-                    }
+                        ) : ( */}
+                    {stock > 0 ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <div>No hay stock disponible</div>}
+                    {/* )
+                    } */}
 
                 </div>
             </div>
